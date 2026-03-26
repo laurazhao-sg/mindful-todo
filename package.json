@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "server": "cd server && node index.js",
-    "render:build": "npm install && npm run build && cd server && npm install",
+    "render:build": "npm install --include=dev && npm run build && cd server && npm install --production",
     "render:start": "cd server && node index.js"
   },
   "dependencies": {
@@ -17,6 +17,9 @@
     "react-dom": "^19.2.4",
     "react-router-dom": "^7.13.2",
     "tesseract.js": "^7.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.4",

@@ -3,6 +3,8 @@ services:
     name: mindful-todo
     runtime: node
     plan: free
-    region: singapore
     buildCommand: npm run render:build
     startCommand: npm run render:start
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
